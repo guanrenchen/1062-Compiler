@@ -1,0 +1,38 @@
+﻿Q：程式內的 RE label 是否可以自定義？
+A：Of course，程式內容請自由發揮盡情揮灑。
+Q：token 對應的輸出，是否要完全跟範例一樣？
+A：文件內的 "範例" 輸出是參考用的，是讓助教方便批改用的。
+Q：Symbol Table 的函式名稱是否要一樣？
+A：這部分請同學盡量名稱統一，但如果真的強迫症發作想使用自定義的函式名稱，請務必在 README 提及，讓助教方便批改。
+
+
+
+Q: 助教是否會出文法錯誤的測資輸入？
+A: 不會喔，文法分析是 parser 在處理(#1)
+Q: 分數的細節助教會怎麼算呢？
+A: 基本上 HW1 附上的 input 能夠全過，那你 basic feature (100%) 就能全拿到囉，HW1 相對簡單，請好好把握！
+#1：為甚麼 advance feature 會有 Syntax error check呢？那部份是屬於文件上的誤植， undeclared variables、redefined variables 其實是屬於語意分析 (semantic error check) 的部分；如果同學有幸明年還要寫一次 HW1 應該就會發現文件有更新了，至於怎麼實作就請同學多多思考了！
+
+
+
+Q: 請問遇到如下的 comment，comment line 應該要 +1 還是 +3 呢？
+A: +3
+/*abcdefg
+asdsadsa
+asdddd*/ 
+Q: 請問遇到 /*asdasd*/ /*sadsadsad*/  同一行有複數 comments 時，行數要 +1 還是 +2 呢？
+A: comment 行數的計算以 code 的行數為主，而不是以 comment 的數量決定，因此 +1
+
+
+
+Q: 請問如下的程式碼，code line 要如何計算？
+A: 3行，換行跟空白都算是程式碼的一部分，所以都要算喔。
+Q: 為什麼文件裡寫 "Conditional expression(s) in if and for loops does not enclosed by parentheses"，但 example 及範例裡面都有括號呢？
+A: 這部分是文件的誤植，原本是 doesn't need to，也就是可有可無。
+
+
+
+Q：error 發生時，symbol table 該怎麼輸出？
+A：當 error 發生時，我們只在乎印出錯誤訊息跟指定行數喔，所以值的正確與否就不重要了，可以選擇不輸出。
+Q：Discard comment 是甚麼意思？
+A：在文件中的 discard comment 是指說 scanner 要有能力忽略 comment，不會將 comment 的內容傳到下一步的 parser 做文法分析而導致錯誤。但為了批改需求，我們會要求把 comment 的內容印出來，反過來思考，當可以把內容印出來時，就代表可以做到忽略了！

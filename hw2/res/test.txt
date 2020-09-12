@@ -1,0 +1,7 @@
+// Block 0 (Global)
+var x int = 10
+{ // Block 1
+	print(x) //你要印出這個 x 是屬於 block 0 的值
+	var x float32 = 3.2
+	print(x) //你要印出這個 x 是屬於 block 1 的值
+}
